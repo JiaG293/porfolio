@@ -37,15 +37,15 @@ jobs:
       - name: Create env file
         run: |
           touch .env
-          echo "VITE_EMAIL=jiag293@gmail.com" >> .env
-          echo "VITE_PHONE=0901410087" >> .env
-          echo "VITE_ADDRESS=Lai Hung Cuong, Binh Chanh, Ho Chi Minh" >> .env
-          echo "VITE_COUNTRY=Viet Nam" >> .env
-          echo "VITE_DISCORD=https://discord.com/users/512904155065614336" >> .env
-          echo "VITE_TELEGRAM=https://t.me/JiaG293" >> .env
-          echo "VITE_FACEBOOK=" >> .env
-          echo "VITE_GITHUB=https://github.com/JiaG293" >> .env
-          echo "VITE_LINKEDIN=https://www.linkedin.com/in/jiag293" >> .env
+          echo "VITE_EMAIL=${{ secrets.VITE_EMAIL }}" >> .env
+          echo "VITE_PHONE=${{ secrets.VITE_PHONE }}" >> .env
+          echo "VITE_ADDRESS=${{ secrets.VITE_ADDRESS }} " >> .env
+          echo "VITE_COUNTRY=${{ secrets.VITE_COUNTRY }}" >> .env
+          echo "VITE_DISCORD=${{ secrets.VITE_DISCORD }}" >> .env
+          echo "VITE_TELEGRAM=${{ secrets.VITE_TELEGRAM }}" >> .env
+          echo "VITE_FACEBOOK=${{ secrets.VITE_FACEBOOK }}" >> .env
+          echo "VITE_GITHUB=${{ secrets.VITE_GITHUB }}" >> .env
+          echo "VITE_LINKEDIN=${{ secrets.VITE_LINKEDIN }}" >> .env
           echo "VITE_CV=${{ secrets.VITE_CV }}" >> .env
           echo "VITE_SUB_CV=${{ secrets.VITE_SUB_CV }}" >> .env
           echo "VITE_SERVICE_ID=${{ secrets.VITE_SERVICE_ID }}" >> .env
@@ -69,19 +69,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
-# env:
-#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#           VITE_EMAIL: ${{ secrets.VITE_EMAIL }}
-#           VITE_PHONE: ${{ secrets.VITE_PHONE }}
-#           VITE_ADDRESS: ${{ secrets.VITE_ADDRESS }}       
-#           VITE_COUNTRY: ${{ secrets.VITE_COUNTRY }}
-#           VITE_DISCORD: ${{ secrets.VITE_DISCORD }}
-#           VITE_TELEGRAM: ${{ secrets.VITE_TELEGRAM }}
-#           VITE_FACEBOOK: ${{ secrets.VITE_FACEBOOK }}
-#           VITE_GITHUB: ${{ secrets.VITE_GITHUB }}
-#           VITE_LINKEDIN: ${{ secrets.VITE_LINKEDIN }}
-#           VITE_CV: ${{ secrets.VITE_CV }}
-#           VITE_SUB_CV: ${{ secrets.VITE_SUB_CV }}
-#           VITE_SERVICE_ID: ${{ secrets.VITE_SERVICE_ID }}
-#           VITE_TEMPLATE_ID: ${{ secrets.VITE_TEMPLATE_ID }}
-#           VITE_PUBLIC_KEY: ${{ secrets.VITE_PUBLIC_KEY }}
