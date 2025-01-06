@@ -46,11 +46,11 @@ jobs:
           echo "VITE_FACEBOOK=" >> .env
           echo "VITE_GITHUB=https://github.com/JiaG293" >> .env
           echo "VITE_LINKEDIN=https://www.linkedin.com/in/jiag293" >> .env
-          echo "VITE_CV=https://cv.jiag.id.vn/en" >> .env
-          echo "VITE_SUB_CV=https://cv.jiag.id.vn/vi" >> .env
-          echo "VITE_SERVICE_ID=" >> .env
-          echo "VITE_TEMPLATE_ID=" >> .env
-          echo "VITE_PUBLIC_KEY=" >> .env
+          echo "VITE_CV=${{ secrets.VITE_CV }}" >> .env
+          echo "VITE_SUB_CV=${{ secrets.VITE_SUB_CV }}" >> .env
+          echo "VITE_SERVICE_ID=${{ secrets.VITE_SERVICE_ID }}" >> .env
+          echo "VITE_TEMPLATE_ID=${{ secrets.VITE_TEMPLATE_ID }}" >> .env
+          echo "VITE_PUBLIC_KEY=${{ secrets.VITE_PUBLIC_KEY }}" >> .env
           
       - name: Build
         run: yarn build
@@ -85,19 +85,3 @@ jobs:
 #           VITE_SERVICE_ID: ${{ secrets.VITE_SERVICE_ID }}
 #           VITE_TEMPLATE_ID: ${{ secrets.VITE_TEMPLATE_ID }}
 #           VITE_PUBLIC_KEY: ${{ secrets.VITE_PUBLIC_KEY }}
-# - name: Create .env file
-      #   run: |
-      #     echo "VITE_EMAIL=jiag293@gmail.com" >> .env
-      #     echo "VITE_PHONE=0901410087" >> .env
-      #     echo "VITE_ADDRESS=Lai Hung Cuong, Binh Chanh, Ho Chi Minh" >> .env
-      #     echo "VITE_COUNTRY=Viet Nam" >> .env
-      #     echo "VITE_DISCORD=https://discord.com/users/512904155065614336" >> .env
-      #     echo "VITE_TELEGRAM=https://t.me/JiaG293" >> .env
-      #     echo "VITE_FACEBOOK=" >> .env
-      #     echo "VITE_GITHUB=https://github.com/JiaG293" >> .env
-      #     echo "VITE_LINKEDIN=https://www.linkedin.com/in/jiag293" >> .env
-      #     echo "VITE_CV=https://cv.jiag.id.vn/en" >> .env
-      #     echo "VITE_SUB_CV=https://cv.jiag.id.vn/vi" >> .env
-      #     echo "VITE_SERVICE_ID=" >> .env
-      #     echo "VITE_TEMPLATE_ID=" >> .env
-      #     echo "VITE_PUBLIC_KEY=" >> .env
