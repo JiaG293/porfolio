@@ -8,7 +8,7 @@ import ScrollToTop from "./utils/ScrollToTop";
 function App() {
   return (
     <>
-      <ScrollToTop/>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -16,7 +16,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
